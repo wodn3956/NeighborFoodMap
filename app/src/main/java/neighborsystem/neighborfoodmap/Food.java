@@ -1,4 +1,5 @@
-package neighborsystem.neighborfoodmap;
+
+        package neighborsystem.neighborfoodmap;
 
 /**
  * Created by Jaewoo Kim on 2017-01-19.
@@ -15,6 +16,7 @@ public class Food {
     private String image2;
 
 
+    public Food(){}
 
 
     public Food(int _id, String title, String address, String image1, String image2){
@@ -53,5 +55,4 @@ public class Food {
 
 
 }
-
 

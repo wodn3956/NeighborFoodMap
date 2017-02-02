@@ -27,7 +27,8 @@
         android:layout_marginTop="66dp"
         android:layout_below="@+id/button2"
         android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button" />
+        android:layout_alignStart="@+id/button"
+        android:onClick="onButton2Clicked" />
 
     <Button
         android:text="맛집 리스트"

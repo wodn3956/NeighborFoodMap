@@ -1,7 +1,8 @@
-package neighborsystem.neighborfoodmap;
+
+        package neighborsystem.neighborfoodmap;
 
 
-import android.content.ContentValues;
+        import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,15 +13,17 @@ import android.util.Log;
 import java.util.ArrayList;
 
 
-/**
+        /**
  * Created by Jaewoo Kim on 2017-01-24.
  */
 
 public class DBHelper extends SQLiteOpenHelper {
 
+
     SQLiteDatabase db;
 
-    public DBHelper(Context context,String name,CursorFactory factory, int version) {
+
+    public DBHelper(Context context, String name, CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
@@ -103,6 +106,9 @@ public class DBHelper extends SQLiteOpenHelper {
         return list2;
 
     }
-}
+
+  }
+
+
 
 
