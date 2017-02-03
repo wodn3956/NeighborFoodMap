@@ -1,11 +1,11 @@
         package neighborsystem.neighborfoodmap;
 
         import android.content.Intent;
-        import android.os.Bundle;
-        import android.support.v7.app.AppCompatActivity;
-        import android.view.View;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+        public class MainActivity extends AppCompatActivity {
 
     DBHelper helper;
 
@@ -80,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onButton3Clicked(View v){
+        Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+        startActivity(intent);
+    }
+
 
 
 }
+
+                /*인증서 지문(SHA1): 0C:99:DC:FB:2A:09:D8:F6:82:0D:EA:78:B6:CB:62:ED:A0:AE:C6:B6
+                API 값 : AIzaSyDxdZuSj2BOEThbi1UCp97pKzQCG4sIsdU
+*/

@@ -23,7 +23,7 @@ public class ListActivity extends Activity {
 
     String filterText;
     DBHelper helper;
-    Food food = new Food();
+
 
 
 
@@ -123,9 +123,7 @@ public class ListActivity extends Activity {
 
         }
 
-        public void onDestory(){
 
-        }
 
 
     }

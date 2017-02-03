@@ -17,18 +17,8 @@
         android:layout_marginBottom="70dp"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:text="맛집 지도" />
-
-    <Button
-        android:text="오늘뭐먹지?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button3"
-        android:layout_marginTop="66dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:onClick="onButton2Clicked" />
+        android:text="맛집 지도"
+        android:onClick="onButton3Clicked" />
 
     <Button
         android:text="맛집 리스트"
@@ -39,5 +29,16 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/button3"
         android:layout_alignStart="@+id/button3" />
+
+    <Button
+        android:text="오늘뭐먹지?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_marginTop="65dp"
+        android:onClick="onButton2Clicked"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button" />
 
 </RelativeLayout>

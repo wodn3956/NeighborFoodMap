@@ -2,9 +2,6 @@ package neighborsystem.neighborfoodmap;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,8 +21,8 @@ public class FoodAdapter extends BaseAdapter /*implements Filterable*/ {
     public Context context;
     LayoutInflater inf;
     ArrayList<Food> list = new ArrayList<Food>(); //아이템 리스트
-    //ArrayList<Food> filteredlist = new ArrayList<Food>(); // 필터링 된 결과 리스트
-    //Filter listFilter ;
+    /*ArrayList<Food> filteredlist = new ArrayList<Food>(); // 필터링 된 결과 리스트
+    Filter listFilter ;*/
 
 
     public FoodAdapter (Context context, ArrayList<Food> list) {

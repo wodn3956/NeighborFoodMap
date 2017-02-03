@@ -15,10 +15,6 @@ public class Food {
     private String image1;
     private String image2;
 
-
-    public Food(){}
-
-
     public Food(int _id, String title, String address, String image1, String image2){
         this._id = _id;
         this.title =title;
@@ -32,18 +28,13 @@ public class Food {
         return this._id;
     }
 
-
     public String getTitle() {
         return title;
     }
 
-
-
     public String getAddress() {
         return address;
     }
-
-
 
     public String getImage1() {
         return image1;
