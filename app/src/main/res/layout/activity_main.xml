@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/d"
     tools:context="neighborsystem.neighborfoodmap.MainActivity">
 
     <Button
@@ -17,11 +18,13 @@
         android:layout_marginBottom="70dp"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:text="맛집 지도"
+        android:text=""
+        android:background="@drawable/a"
         android:onClick="onButton3Clicked" />
 
     <Button
-        android:text="맛집 리스트"
+        android:text=""
+        android:background="@drawable/b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
@@ -31,7 +34,8 @@
         android:layout_alignStart="@+id/button3" />
 
     <Button
-        android:text="오늘뭐먹지?"
+        android:text=""
+        android:background="@drawable/c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"

@@ -27,7 +27,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMapClickListener {
@@ -51,8 +50,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        //////////위치설정하는곳
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.495306, 127.122417), 16));
+        //////////시작 위치설정하는곳
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(37.494958, 127.122466),18));
         mMap.setOnMarkerClickListener(this); mMap.setOnMapClickListener(this);
         setCustomMarkerView();
         getSampleMarkerItems();
@@ -65,8 +64,29 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void getSampleMarkerItems() {
         ArrayList<MarkerItem> sampleList = new ArrayList();
-        sampleList.add(new MarkerItem(37.494930, 127.120570, 3333333));
-        sampleList.add(new MarkerItem(37.496766, 127.119501, 444444));
+        //음식점 좌표 넣어라~
+        sampleList.add(new MarkerItem(37.494958, 127.122466, "네이버시스템"));
+        sampleList.add(new MarkerItem(37.496656, 127.120195, "현대옥"));
+        sampleList.add(new MarkerItem(37.496737, 127.121373, "오향가"));
+        sampleList.add(new MarkerItem(37.494424, 127.122829, "男다른감子탕"));
+        sampleList.add(new MarkerItem(37.494033, 127.122368, "신선설농탕"));
+        sampleList.add(new MarkerItem(37.493762, 127.121783, "금바위"));
+        sampleList.add(new MarkerItem(37.494327, 127.121415, "포하임"));
+        sampleList.add(new MarkerItem(37.494725, 127.121298, "함경도찹쌀순대"));
+        sampleList.add(new MarkerItem(37.494377, 127.120552, "유타로"));
+        sampleList.add(new MarkerItem(37.495021, 127.120431, "홍대칼국수와족발"));
+        sampleList.add(new MarkerItem(37.493482, 127.121937, "함흥본가면옥"));
+        sampleList.add(new MarkerItem(37.496455, 127.121672, "청춘연가"));
+        sampleList.add(new MarkerItem(37.494559, 127.124034, "백년교동짬뽕"));
+        sampleList.add(new MarkerItem(37.497182, 127.121103, "명동찌개마을"));
+        sampleList.add(new MarkerItem(37.495266, 127.119619, "가츠현"));
+        sampleList.add(new MarkerItem(37.495781, 127.119723, "남원산성추어탕"));
+        sampleList.add(new MarkerItem(37.496468, 127.120392, "오연숙불쭈꾸미"));
+        sampleList.add(new MarkerItem(37.497194, 127.120528, "의정부부대찌개"));
+        sampleList.add(new MarkerItem(37.497480, 127.119097, "진또배기"));
+        sampleList.add(new MarkerItem(37.494784, 127.123882, "전주화심순두부"));
+        sampleList.add(new MarkerItem(37.496640, 127.121617, "이화수전통육개장"));
+
 
 
         for (MarkerItem markerItem : sampleList) {
@@ -78,9 +98,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker addMarker(MarkerItem markerItem, boolean isSelectedMarker) {
 
         LatLng position = new LatLng(markerItem.getLat(), markerItem.getLon());
-        int price = markerItem.getPrice();
-        String formatted = NumberFormat.getCurrencyInstance().format((price));
-        tv_marker.setText(formatted);
+        String price = markerItem.getPrice();
+        tv_marker.setText(price);
 
 
         if (isSelectedMarker) {
@@ -92,7 +111,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.title(Integer.toString(price));
+        markerOptions.title((price));
         markerOptions.position(position);
         markerOptions.icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(this, marker_root_view)));
 
@@ -116,7 +135,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         double lat = marker.getPosition().latitude;
         double lon = marker.getPosition().longitude;
-        int price = Integer.parseInt(marker.getTitle());
+        String price = (marker.getTitle());
         MarkerItem temp = new MarkerItem(lat, lon, price);
         return addMarker(temp, isSelectedMarker);
     }

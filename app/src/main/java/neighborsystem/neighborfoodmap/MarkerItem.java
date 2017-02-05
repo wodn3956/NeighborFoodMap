@@ -7,9 +7,9 @@ package neighborsystem.neighborfoodmap;
 public class MarkerItem {
     double lat;
     double lon;
-    int price;
+    String price;
 
-    public MarkerItem(double lat, double lon, int price) {
+    public MarkerItem(double lat, double lon, String price) {
         this.lat = lat;
         this.lon = lon;
         this.price = price;
@@ -31,11 +31,11 @@ public class MarkerItem {
         this.lon = lon;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }

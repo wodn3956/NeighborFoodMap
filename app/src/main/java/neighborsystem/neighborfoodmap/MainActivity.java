@@ -20,7 +20,7 @@ import android.view.View;
                 null,                           // 커서 팩토리
                 2);                             // 버전 번호
 
-
+        ////////★ 데이터 추가 시 수정해야할 곳
 
         helper.delete("현대옥");
         helper.delete("오향가");
@@ -42,6 +42,9 @@ import android.view.View;
         helper.delete("진또배기");
         helper.delete("전주화심순두부");
         helper.delete("이화수전통육개장");
+
+
+        ////////★ 데이터 추가 시 수정해야할 곳
 
         helper.insert(1, "현대옥", "서울시 송파구 양재대로62길 37-1 진양빌딩", "1", "1");
         helper.insert(2, "오향가", "서울시 송파구 송이로 106", "2", "1");

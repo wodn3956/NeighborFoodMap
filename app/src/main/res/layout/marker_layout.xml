@@ -6,12 +6,12 @@
 
     <TextView
         android:id="@+id/tv_marker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:background="@drawable/ic_marker_phone"
         android:gravity="center"
         android:text="KJW"
-        android:textSize="16sp"/>
+        android:textSize="10sp"/>
 
 </FrameLayout>
 
